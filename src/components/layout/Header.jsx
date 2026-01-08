@@ -1,42 +1,58 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => setMenuOpen((prev) => !prev);
-    const closeMenu = () => setMenuOpen(false);
 
     return (
-        <header className="header">
-            <div className="header-inner">
-                <h1 className="logo">
-                    <NavLink to="/" onClick={closeMenu}>LOGO</NavLink>
-                </h1>
+        <>
+            {/* All Menu */}
+            <div className="all-menu">
+                <ul className="menu-list">
+                    <li className="menu-item1">
+                        <a href="/index.html">HOME</a>
+                    </li>
+                    <li className="menu-item2">
+                        <a href="/html/about/index.html">ABOUT</a>
+                    </li>
+                    <li className="menu-item3">
+                        <a href="/html/career/index.html">CAREER</a>
+                    </li>
+                    <li className="menu-item4">
+                        <a href="/html/gsap/index.html">GSAP</a>
+                    </li>
+                </ul>
+            </div>
+            {/* // All Menu */}
 
-                {/* MO MENU BTN */}
-                <button
-                    className={`menu-toggle ${menuOpen ? "open" : ""}`}
-                    onClick={toggleMenu}
-                    aria-label="메뉴 열기/닫기"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            {/* Header */}
+            <header>
+                <div className="logo">
+                    <a href="/index.html">FOLIO/26</a>
+                </div>
 
-                {/* PC MENU */}
-                <nav className={`nav ${menuOpen ? "open" : ""}`}>
-                    <ul>
-                        <li><NavLink to="/Page1" onClick={closeMenu}>Page1</NavLink></li>
-                        <li><NavLink to="/Page2" onClick={closeMenu}>Page2</NavLink></li>
-                        <li><NavLink to="/Page3" onClick={closeMenu}>Page3</NavLink></li>
-                        <li><NavLink to="/Page5" onClick={closeMenu}>Page4</NavLink></li>
-                        <li><NavLink to="/Page4" onClick={closeMenu}>Page5</NavLink></li>
+                <nav>
+                    <ul className="navbar-list">
+                        <li className="active">
+                            <a href="/">HOME</a>
+                        </li>
+                        <li>
+                            <a href="">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="/html/career/index.html">CAREER</a>
+                        </li>
+                        <li>
+                            <a href="/html/gsap/index.html">GSAP</a>
+                        </li>
                     </ul>
                 </nav>
-            </div>
-        </header>
+
+                <a href="#" className="all-menu-btn">
+                    <span></span>
+                    <span></span>
+                </a>
+            </header>
+            {/* // Header */}
+        </>
     );
 };
 
