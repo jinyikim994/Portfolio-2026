@@ -12,14 +12,16 @@
 // Common
 @import "./common/common";
 
+// Container
+@import "./components/layout/container";
+
 // Header
 @import "./components/layout/header";
 
-// Footer
-@import "./components//layout/footer";
-
 // Main
-@import "./components//layout/Main";
+@import "./components/layout/main";
 
 // Page  
-@import "./components/page";
+@import "./components/about";
+@import "./components/career";
+@import "./components/gsap";

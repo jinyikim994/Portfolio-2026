@@ -1,0 +1,87 @@
+/* Main Container */
+.container-fix {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
+
+/* Sub Container */
+.container-fix-sub {
+    max-width: 1630px;
+    width:100%;
+    margin: auto;
+    padding: 100px 0;
+}
+
+/* About Page */
+.about .visual .container-fix-sub {
+    display: flex;
+    align-items: center;
+}
+
+.about .introduction .container-fix-sub {
+    display: flex;
+}
+
+.about .experience .container-fix-sub {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Career Page */
+.about .career .container-fix-sub {
+    max-width: 1630px;
+    margin: auto;
+}
+
+/************** 반응형 **************/
+
+/* PC */
+
+@media (max-width:1570px){
+
+    /* Main Container */
+    .container-fix {
+        width: 80%;
+    }
+
+    /* Sub Container */
+    .container-fix-sub {
+        width: 90%;
+        padding: 30px 0;
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 991px) {
+
+    /* Main Container */
+    .container-fix {
+        width: 90%;
+    }
+
+    /* Sub Container */
+    .container-fix-sub {
+        width: 90%;
+        padding: 30px 0;
+    }
+
+     /* About Page */
+    .about .introduction .container-fix-sub {
+        flex-direction: column;
+    }
+
+    .about .experience .container-fix-sub {
+        width: 90% !important;
+        padding-top: 0;
+    }
+
+    /* Career Page */
+    .about .career .container-fix-sub {
+        width: 90% !important;
+    }
+
+}
+
+

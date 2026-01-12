@@ -1,9 +1,283 @@
 // Main
-.main{
-    height: 100vh;
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative !important;
     background: #000;
+} 
 
-    h2{
-        color: #fff;
+/* Main Intro */
+.main-wrapper {
+    width:100%;
+    padding: 64px 0;
+}
+
+.main-wrapper .main-slide .main-project {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-wrapper .main-thum {
+    width: 39.4vw;
+    position:relative;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-wrapper .main-thum img{
+    width: 100%;
+    height: 100%;
+}
+
+.main-wrapper .main-thum video{
+    width: 100%;
+    height: 100%;
+}
+
+.main-wrapper .main-slide .left-text {
+    display: inline-block;
+    position: absolute;
+    bottom: 12%;
+    left: 30px;
+    font-size: 1vw;
+    color: #fff;
+}
+
+/* Circl Anmiation */
+.main-slide .project-btn {
+    position: absolute;
+    bottom: -60px;
+    right: -80px;
+}
+
+.main-slide .project-btn .project-circle{ 
+    width: 9vw;
+    height: 9vw;
+    position: relative;
+    border-radius: 50%;
+    background:#151515;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    color: #fff;
+    animation: loader1 4s linear infinite;
+}  
+
+.main-slide .project-btn .project-circle:after{ 
+    content: "";
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    border-radius: 50%;
+    background-color: #f2652e;
+    opacity: 0.6;
+    z-index: 50;
+}
+
+.main-slide .project-btn:hover .project-circle {
+    background:#000;
+    transition: all .6s;
+} 
+
+.main-slide .project-btn p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1vw;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes loader1{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}  
+
+/* Right Text */
+.main-slide .right-text {
+    width:calc(100% - 39.4vw);
+    padding-left: 4%;
+    font-size: 3.3566vw;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* Paging */
+.main-slide .main-paging {
+    margin-top: 20px;
+}
+
+.main-slide .main-paging>span {
+    font-size: 3vw;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.main-slide .slick-dots{
+    width: 100%;
+    position: static;
+    bottom: auto;
+    left: auto; 
+    margin: 30px 0 0;
+}
+
+.main-slide .slick-dots li{
+    display: none;
+    cursor: default;
+    height: 0;
+}
+
+.main-slide .slick-dots li.slick-active{
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+.main-slide .slick-dots li.slick-active button{
+    width: 100%;
+    height: 1px;
+    background:rgba(255,255,255,0.3);
+    border: 0;
+    border-radius: 0;
+    cursor: default
+}
+
+.main-slide .slick-dots li.slick-active button::before {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    border-radius: 0;
+    background:#fff;
+} 
+
+.main-slide .slick-dots li.slick-active button::after{
+    width: 26px;
+    height: 26px;
+    display: block;
+    border: 1px solid #ddd ;
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    top: -13.5px; 
+    left: 0;
+    background: url('../../images/main/slick-circle.png') center /contain;
+    animation-name: slick-circle;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slick-circle{
+    0%{left:0;}
+    100%{left:calc(100% - 26px);}
+}  
+
+/* Main Text Animation */
+.main-slide .slick-slide .left-text{ animation: fadeOutRight 1s both; }
+.main-slide .slick-slide .right-text{ animation: fadeOutLeft 1s both; color:#fff; }
+.main-slide .slick-slide.slick-active .left-text{ animation: fadeInLeft 1s both .5s; }
+.main-slide .slick-slide.slick-active .right-text{ animation: fadeInLeft 0.5s both 0.5s; }
+
+/* Main Slick Btn */
+.main-slide .slick-prev,.main-slide .slick-next{
+    width: 33px;
+    height: 100%;
+    color:#fff;
+    font-size: 0.6250vw;
+    line-height: 2;
+    position: fixed;
+    top: 0;
+    transform: translate(0,0);
+}
+
+.main-slide .slick-prev{
+    left:20px;
+}
+
+.main-slide .slick-next{
+    right:20px;
+}
+
+.main-slide .slick-prev:before,.main-slide .slick-next:before{
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top:0;
+    background:#fff;
+    opacity:0.1;
+} 
+
+/* 반응형 시작 */
+
+/* PC */
+@media (max-width:1570px){
+
+    .main-slide .left-text{
+        font-size: 1.5429vw;
+    }
+
+
+    .main-slide .right-text{
+        font-size: 3.4286vw;
     }
 }
+
+/* 모바일 */
+@media screen and (max-width: 991px) {
+    
+    nav{
+        display: none;
+    }
+
+    .main-slide .main-project {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-slide .main-thum {
+        width: 100%;
+    }
+
+    .main-slide .right-text {
+        width: 100%;
+        padding-left: 0;
+        text-align: right;
+        margin-top:20px;
+    }
+
+    .main-slide .main-paging>span {
+        font-size: 6vw;
+    }
+
+    .main-wrapper .main-slide .left-text {
+        font-size: 3vw;
+        left: 15px;
+    }
+
+    .main-slide .right-text {
+        font-size: 7vw;
+    }
+
+    .main-slide .project-btn {
+        display: none;
+    }
+
+    .main-slide .slick-prev,.main-slide .slick-next {
+        display: none !important;
+    }
+}
+

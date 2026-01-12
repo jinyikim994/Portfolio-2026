@@ -1,9 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
+// slick
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // components
 import Header from "./components/layout/Header";
 import Main from "./components/layout/Main";
-import Footer from "./components/layout/Footer";
 // Page
 import Page1 from "./pages/Page1";
 import Page2 from "./pages/Page2";
@@ -23,7 +27,6 @@ function App() {
                     <Route path="/Page4" element={<Page4 />} />
                     <Route path="/Page5" element={<Page5 />} />
                 </Routes>
-            <Footer />
         </>
     );
 }
