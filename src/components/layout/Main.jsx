@@ -126,9 +126,9 @@ const MainSlide = () => {
 
                   <a href="#" className="project-btn">
                     <div className="project-circle"></div>
-                    <p>
-                      JINYI KIM <br /> PROJECT
-                    </p>
+                      <p>
+                        JINYI KIM <br /> PROJECT
+                      </p>
                   </a>
                 </div>
 
