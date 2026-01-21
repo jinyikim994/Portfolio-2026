@@ -17,7 +17,7 @@ import Page5 from "./pages/Page5";
 
 function App() {
     return (
-    <>
+        <>
             <Header />
                 <Routes>
                     <Route index element={<Main />} /> 

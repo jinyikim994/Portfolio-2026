@@ -84,10 +84,9 @@ const MainSlide = () => {
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 5000,
     arrows: true,
     dots: true,
-
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
@@ -95,7 +94,6 @@ const MainSlide = () => {
   return (
     <div className="main-wrapper">
       <div className="container-fix">
-
         <Slider className="main-slide" {...settings}>
           {projects.map((project, index) => (
             <div key={project.id}>
@@ -123,12 +121,11 @@ const MainSlide = () => {
                       ))}
                     </span>
                   </div>
-
                   <a href="#" className="project-btn">
                     <div className="project-circle"></div>
-                      <p>
-                        JINYI KIM <br /> PROJECT
-                      </p>
+                    <p>
+                      JINYI KIM <br /> PROJECT
+                    </p>
                   </a>
                 </div>
 
@@ -144,14 +141,11 @@ const MainSlide = () => {
                 </div>
               </div>
               <div className="main-paging">
-                <span>
-                  <b>{String(index + 1).padStart(2, "0")}</b> - 05
-                </span>
+                <span><b>{String(index + 1).padStart(2, "0")}</b> - 05</span>
               </div>
             </div>
           ))}
         </Slider>
-        
       </div>
     </div>
   );
