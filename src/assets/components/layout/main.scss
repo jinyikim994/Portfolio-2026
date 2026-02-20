@@ -207,6 +207,15 @@ body{
     transform: translate(0,0);
 }
 
+.main-slide .slick-next:hover{
+    display: none;
+}
+
+.main-slide .slick-prev:hover{
+    display: none;
+}
+
+
 .main-slide .slick-prev{
     left:20px;
 }
@@ -214,18 +223,6 @@ body{
 .main-slide .slick-next{
     right:20px;
 }
-
-/* .main-slide .slick-prev:before,.main-slide .slick-next:before{
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top:0;
-    background:#fff;
-    opacity:0.1;
-} 
- */
-/* 반응형 시작 */
 
 /* PC */
 @media (max-width:1570px){

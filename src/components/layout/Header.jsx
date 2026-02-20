@@ -1,57 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import AllMenu from "../AllMenu";
+
+export const MENU_ITEMS = [
+    { id: 1, label: 'HOME', link: '/' },
+    { id: 2, label: 'ABOUT', link: '/about' },
+    { id: 3, label: 'CAREER', link: '/career' },
+    { id: 4, label: 'GSAP', link: '/gsap' },
+];
 
 const Header = () => {
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = (e) => {
+        e.preventDefault();
+        setIsOpen(!isOpen);
+    };
+
     return (
         <>
-            {/* All Menu */}
-            <div className="all-menu">
-                <ul className="menu-list">
-                    <li className="menu-item1">
-                        <a href="/index.html">HOME</a>
-                    </li>
-                    <li className="menu-item2">
-                        <a href="/html/about/index.html">ABOUT</a>
-                    </li>
-                    <li className="menu-item3">
-                        <a href="/html/career/index.html">CAREER</a>
-                    </li>
-                    <li className="menu-item4">
-                        <a href="/html/gsap/index.html">GSAP</a>
-                    </li>
-                </ul>
-            </div>
-            {/* // All Menu */}
-
             {/* Header */}
             <header>
-                <div className="logo">
-                    <a href="/index.html">FOLIO/26</a>
-                </div>
+                <div className="logo"><a href="/index.html">FOLIO/26</a></div>
 
                 <nav>
                     <ul className="navbar-list">
-                        <li className="active">
-                            <a href="/">HOME</a>
+                        {MENU_ITEMS.map((item) => (
+                        <li key={item.id} className={item.label === 'HOME' ? 'active' : ''}>
+                            <a href={item.link}>{item.label}</a>
                         </li>
-                        <li>
-                            <a href="">ABOUT</a>
-                        </li>
-                        <li>
-                            <a href="/html/career/index.html">CAREER</a>
-                        </li>
-                        <li>
-                            <a href="/html/gsap/index.html">GSAP</a>
-                        </li>
+                        ))}
                     </ul>
                 </nav>
 
-                <a href="#" className="all-menu-btn">
+                <a 
+                href="#" 
+                className={`all-menu-btn ${isOpen ? 'is-active' : ''}`}
+                onClick={toggleMenu}
+                >
                     <span></span>
                     <span></span>
                 </a>
             </header>
             {/* // Header */}
+
+            <AllMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </>
     );
 };

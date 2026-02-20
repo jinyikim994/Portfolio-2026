@@ -92,6 +92,7 @@ const MainSlide = () => {
   };
 
   return (
+
     <div className="main-wrapper">
       <div className="container-fix">
         <Slider className="main-slide" {...settings}>
@@ -139,15 +140,16 @@ const MainSlide = () => {
                     ))}
                   </span>
                 </div>
+                </div>
+                  <div className="main-paging">
+                    <span><b>{String(index + 1).padStart(2, "0")}</b> - 05</span>
+                  </div>
               </div>
-              <div className="main-paging">
-                <span><b>{String(index + 1).padStart(2, "0")}</b> - 05</span>
-              </div>
-            </div>
           ))}
         </Slider>
       </div>
     </div>
+    
   );
 };
 
