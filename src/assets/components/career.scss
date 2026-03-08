@@ -1,1 +1,179 @@
-// Career
+/* Career */
+
+.career {
+    color: #fff;
+    font-family: 'Italiana', serif;
+}
+
+.career .container-fix-sub {
+    position: relative;
+}
+
+.career .title {
+    position: relative;
+}
+
+.career .title h1 {
+    font-size: 8vw;
+    color:rgba(255, 255, 255, 0.1)
+}
+
+.career .title p {
+    font-size: 2.7vw;
+    position: absolute;
+    top: 59%;
+    left: 16%;
+}
+
+.career .tab-wrap {
+    padding: 100px 0;
+}
+
+.career .tab-wrap .tabs {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.career .tab-wrap .tabs li {
+    padding-right: 15px;
+    padding: 10px 42px;
+    display: inline-block;
+    margin-right: 27px;
+    font-size: 1vw;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;    
+}
+
+.career ul.tabs li.current{
+	border-bottom :1px solid #f2652e;
+}
+
+
+.career .tab-content{
+	display: none;
+}
+
+.career .tab-content.current{
+	display: inherit;
+}
+
+.career .content {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.career .content .box{
+    width: 30.9%;
+    position: relative;
+}
+
+.career .content .box:not(:last-of-type) {
+    margin-right: 2%;
+    margin-bottom: 50px;
+}
+
+.career .img-box {
+    width: 100%;
+    height: 15vw;
+    overflow: hidden;
+    box-shadow: 0 0 18px 0 rgb(0 0 0 / 14%);
+    display: flex;
+    flex-direction: column;
+}
+
+.career .text-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.career .box:hover .text-box {
+    display: block;
+}
+
+.career .box:hover .text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+
+.career .box:hover .text-box h5 {
+    font-size: 2vw;
+    color: #fff;
+}
+
+.career .box:hover .text-box h6 {
+    font-size: 1vw;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+
+/* 모바일 */
+@media screen and (max-width: 991px) {
+    
+    .career .tab-wrap {
+        padding: 50px 0 !important;
+    }
+
+    .career .img-box {
+        height: 50vw !important;
+    }
+
+    .career .img-box img {
+        width: 100%;
+    }
+
+    .career .content .box {
+        width: 100% !important;
+    }
+
+    .career .tab-wrap .tabs {
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+    .career .tab-wrap .tabs li {
+        padding: 10px 17px !important;
+        margin: 0 !important;
+    }
+
+    .career .title h1 {
+        font-size: 14vw;
+        color:rgba(255, 255, 255, 0.1)
+    }
+    
+    .career .title p {
+        font-size: 6.7vw;
+        position: absolute;
+        top: 59%;
+        left: 16%;
+    }
+
+    .career .tab-wrap .tabs li {
+        font-size: 3vw;
+    }
+
+    .career .box:hover .text-box h5 {
+        font-size: 6vw;
+    }
+    .career .box:hover .text-box h6 {
+        font-size: 4vw;
+    }
+    
+}
+
+
+
+
+
+

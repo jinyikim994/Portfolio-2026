@@ -1,1 +1,112 @@
-// Gsap
+/* gsap */
+
+.gsap {
+    font-family: 'Italiana', serif;
+    color: #fff;
+}
+
+.gsap .container-fix-sub {
+    padding: 50px 0;
+}
+
+.gsap h1 {
+    font-size: 6vw;
+    color:#fff;
+    text-align: center;
+}
+
+.gsap h2 {
+    font-size: 7vw;
+}
+
+.gsap .box {
+    text-align: center;
+    padding: 200px 0;
+}
+
+.gsap .box p {
+    color: #fff;
+    font-size: 2vw;
+}
+
+.gsap .box p:nth-child(2) {
+    color: #f2652e;
+}
+
+/* gsap Title Effect */
+.gsap .title>p{ font-size: 2vw; font-weight:500; color:#222; letter-spacing:5px; cursor:pointer; }
+.gsap .title>p span{ transition: 0.5s; }
+.gsap .title>p:hover span:nth-child(1){ margin-right: 5px; }
+.gsap .title>p:hover span:nth-child(1)::after{ content:"'"; }
+.gsap .title>p:hover span:nth-child(2){ margin-left: 20px; }
+.gsap .title>p:hover span{ color:#f2652e; }
+
+/* IMG START */
+.gsap .quote {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.scroll h1 {
+    font-size: 100px;
+    color: #fff;
+}
+
+.gsap .box {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gsap .thank {
+    display: flex;
+    justify-content: center;
+}
+
+.gsap .thank span{ 
+    font-size: 100px;
+    color: #f2652e;
+}
+
+
+
+/************** 반응형 **************/
+
+/* PC */
+
+@media (max-width:1570px){
+
+    nav {
+        display: none;
+    }
+
+}
+
+/* 모바일 */
+@media screen and (max-width: 991px) {
+
+    .gsap .thank span {
+
+        font-size: 30px;
+    }
+
+    .gsap .box img {
+        width: 100%;
+    }
+
+    .gsap h2 {
+        font-size: 9vw;
+    }
+
+    .gsap .title>p {
+        font-size: 6vw;
+    }
+    
+}
+    

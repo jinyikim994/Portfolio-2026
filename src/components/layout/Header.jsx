@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import AllMenu from "../AllMenu";
 
 export const MENU_ITEMS = [
     { id: 1, label: 'HOME', link: '/' },
     { id: 2, label: 'ABOUT', link: '/about' },
-    { id: 3, label: 'CAREER', link: '/career' },
-    { id: 4, label: 'GSAP', link: '/gsap' },
+    { id: 3, label: 'CAREER', link: '/Career' },
+    { id: 4, label: 'GSAP', link: '/Gsap' },
 ];
 
 const Header = () => {
@@ -26,9 +27,9 @@ const Header = () => {
                 <nav>
                     <ul className="navbar-list">
                         {MENU_ITEMS.map((item) => (
-                        <li key={item.id} className={item.label === 'HOME' ? 'active' : ''}>
-                            <a href={item.link}>{item.label}</a>
-                        </li>
+                            <li key={item.id} className={item.label === 'HOME' ? 'active' : ''}>
+                            <Link to={item.link}>{item.label}</Link>
+                            </li>
                         ))}
                     </ul>
                 </nav>

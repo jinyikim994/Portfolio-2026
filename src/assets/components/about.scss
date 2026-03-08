@@ -1,1 +1,299 @@
-// About
+/* Common */
+.about .main-title {
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-family: 'Italiana', serif;
+    color: #fff;
+}
+
+.about .visual-title {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: 'Italiana', serif;
+    color: #fff;
+    text-align: center;
+}
+
+.about .desc {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.7vw;
+    line-height: 27px;
+    padding: 20px 0;
+    color: #fff;
+    word-break:break-all
+}
+
+/* Visual */
+.about .visual {
+    animation: fadeInRight 1s both 1s;
+}
+
+.about .visual .left {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .visual .right {
+    width: 40%;
+}
+
+.about .visual .right video {
+    width: 100%;
+}
+
+/* Introduction */
+.about .introduction {
+    animation: fadeInLeft 2s both 2s;
+}
+
+.about .introduction .left {
+    width: 30%;
+}
+
+.about .introduction .left img {
+    width: 100%;
+}
+
+.about .introduction .right {
+    width: 45%;
+    padding-left: 5%;
+    color: #fff;
+}
+
+/* Experience */
+.about .experience {
+    display: flex;
+}
+
+.about .experience.top p {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.about .experience .image-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about .experience .image-wrap img {
+    width: 10%;
+    //opacity: 0;
+}
+
+/* Career */
+.about .career {
+    animation: fadeInLeft 4s both 4s;
+}
+
+.about .career .accordion-item {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding: 45px 0;
+    color: #fff;
+    font-size: 1.2vw;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.about .career i.fas { color: #fff; font-size: 16px; padding-right: 15px;}
+
+.about .career .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .career .desc {
+    padding: 15px;
+    display: none;
+    font-size: 0.8vw;
+}
+
+.about .accordion-item.active .title i.fas {
+    color: #fff;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.about .accordion-item.active .desc {
+    display: block;
+    transition: 0.3s all;
+    background: #fff;
+    color: #000;
+    margin: 15px 0;
+}
+
+/* Contact */
+.about .contact {
+    color: #fff;
+    animation: fadeInLeft 5s both 5s;
+}
+
+.about .contact .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    margin-top: 50px;
+}
+
+.about .contact .info  .circle {
+    width: 9.8160vw;
+    height: 9.8160vw;
+    background: #fff;
+    border-radius: 50%;
+    color: #000;
+    text-align: center;
+    font-size: 1vw;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .contact .info  .circle:hover {
+    background: #f2652e;
+    color:#000;
+    transition: all 1s;
+}
+
+.about .contact .info  ul {
+    font-size: 0.8vw;
+}
+
+.about .contact .info  ul li {
+    opacity: 0.8;
+    font-size: 1vw;
+    padding-bottom: 10px;
+}
+
+/************** 반응형 **************/
+
+/* PC */
+
+@media (max-width:1570px){
+
+    /* Visual */
+    .about .visual .right {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Introduction */
+    .about .introduction .left {
+        width: 100%;
+    }
+
+    .about .introduction .left img {
+        width: 80%;
+    }
+
+    .about .introduction .right {
+        width: 100%;
+        padding: 0;
+    }
+    
+    /* Experience */
+    .about .experience .image-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* Contact */
+    .about .contact .info {
+        padding: 10px;
+    }
+
+}
+
+/* 모바일 */
+@media screen and (max-width: 991px) {
+
+    /* Common */
+    .about .main-title  {
+        font-size: 6.3vw;
+    }
+
+    .about .desc {
+        font-size: 2.8vw;
+        line-height: 20px !important;
+    }
+
+    /* Visual */
+    .about .visual-title {
+        font-size: 2vw;        
+    }
+
+    /* Introduction */
+    .about .introduction .left img {
+        width: 100%;
+    }
+
+    /* Experience */
+    .about .experience .quote {
+        line-height: 19px;
+        font-size: 2.8vw;
+    }
+
+    .about .experience .image-wrap {
+        gap: 15px;
+    }
+
+    .about .experience .image-wrap img {
+        width: 30%;
+    }
+    
+
+    .about .introduction .right {
+        margin-top: 20px;
+    }
+
+    .about .experience div {
+        gap: 15px;
+    } 
+
+    /* Career */
+    .about .career .accordion-item {
+        padding: 20px 0;
+    }
+
+    .about .career .title {
+        font-size: 3vw;
+    }
+
+    .about .accordion-item.active .desc {
+        font-size: 3vw;
+    }
+
+    /* Contact */
+    .about .contact .info {
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 25px;
+        align-items: baseline;
+        flex-direction: column;
+    }
+
+    .about .contact .info .circle {
+        width: 18vw;
+        height: 18vw;
+        font-size: 12px;
+    }
+
+    .about .contact .info ul {
+        padding: 10px 0;
+    }
+
+    .about .contact .info ul li {
+        font-size: 2.8vw;
+    }
+
+    .about .contact .info  ul li:first-child {
+        font-size: 3.2vw;
+    }    
+
+}
